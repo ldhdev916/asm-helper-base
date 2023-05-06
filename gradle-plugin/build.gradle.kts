@@ -24,6 +24,11 @@ buildConfig {
     buildConfigField("String", "HELPER_LIBRARY_VERSION", "\"${rootProject.version}\"")
 }
 
+pluginBundle {
+    website = "https://ldhdev.com"
+    vcsUrl = "https://github.com/ldhdev916/asm-helper-base"
+}
+
 gradlePlugin {
     plugins {
         create("asmKotlinIrPlugin") {
