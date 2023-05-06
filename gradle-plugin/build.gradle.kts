@@ -27,6 +27,7 @@ buildConfig {
 pluginBundle {
     website = "https://ldhdev.com"
     vcsUrl = "https://github.com/ldhdev916/asm-helper-base"
+    tags = listOf("asm")
 }
 
 gradlePlugin {
