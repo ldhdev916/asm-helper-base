@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     kotlin("jvm") version "1.7.10"
     id("com.github.gmazzo.buildconfig") version "3.1.0" apply false
@@ -21,23 +19,24 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks {
+    test {
+        useJUnitPlatform()
+    }
+
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
-artifacts {
-    archives(tasks.javadoc)
-    archives(tasks.kotlinSourcesJar)
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
 signing {
-    sign(configurations.archives.get())
+    sign(publishing.publications)
 }
-
 
 publishing {
 
