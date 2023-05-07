@@ -11,7 +11,7 @@ dependencies {
 }
 
 buildConfig {
-    val project = project(":compiler-plugin")
+    val project = project(":asm-compiler-plugin")
 
     packageName(project.group.toString())
     buildConfigField("String", "KOTLIN_PLUGIN_ID", "\"${rootProject.property("kotlin.plugin.id")}\"")

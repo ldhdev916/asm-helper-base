@@ -7,5 +7,5 @@ pluginManagement {
 }
 
 rootProject.name = "asm-helper-base"
-include("compiler-plugin")
-include("gradle-plugin")
+include("asm-compiler-plugin")
+include("asm-gradle-plugin")

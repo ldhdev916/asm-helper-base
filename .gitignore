@@ -3,6 +3,6 @@
 /build/
 /build/classes/kotlin/main/
 /build/classes/kotlin/test/
-/compiler-plugin/build/
-/gradle-plugin/build/
+/asm-compiler-plugin/build/
+/asm-gradle-plugin/build/
 .idea/
